@@ -2,9 +2,8 @@
 
 R pipeline for leave-one-out cross-validated (LOOCV) regression of brain network activity (ToM & Pain) from dimensional psychopathology (ASR) (simulated data because of sensitive patient data).
 
----
-
-## Overview
+--- 
+# Overview
 
 The primary objective of this workflow is to estimate the out-of-sample predictive performance ($R^2_{\text{CV}}$) of psychopathological symptom dimensions on neural network activity, avoiding optimistic in-sample fit estimates.
 
@@ -18,7 +17,7 @@ Target outcomes:
 
 ---
 
-## Statistical Methodology
+# Statistical Methodology
 
 Models are fit using Generalised Linear Models (`glm` with Gaussian family / OLS). Validation is carried out via **Leave-One-Out Cross-Validation (LOOCV)** using the `boot` package.
 
@@ -34,11 +33,11 @@ Where:
 
 ---
 
-## Reproduction & Usage
+# Reproduction & Usage
 
 The script is self-contained. To ensure direct reproducibility without distributing sensitive patient data, the pipeline automatically generates a synthetic sample dataset ($N = 150$) that matches the exact distributional properties and schema expected by the models.
 
-### Prerequisites
+# Prerequisites
 
 * **R version**: $\ge 4.1.0$
 * **Required packages**: `dplyr`, `boot`, `tibble`
