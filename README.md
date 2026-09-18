@@ -1,6 +1,6 @@
 # Cross-Validated Regression Analysis of Functional Brain Network Activity and Dimensional Psychopathology
 
-R pipeline for leave-one-out cross-validated (LOOCV) regression of brain network activity (ToM & Pain) from dimensional psychopathology (ASR).
+R pipeline for leave-one-out cross-validated (LOOCV) regression of brain network activity (ToM & Pain) from dimensional psychopathology (ASR) (simulated data because of sensible patient data).
 
 ---
 
@@ -20,7 +20,7 @@ Target outcomes:
 
 ## Statistical Methodology
 
-Models are fit using Generalized Linear Models (`glm` with Gaussian family / OLS). Validation is carried out via **Leave-One-Out Cross-Validation (LOOCV)** using the `boot` package.
+Models are fit using Generalised Linear Models (`glm` with Gaussian family / OLS). Validation is carried out via **Leave-One-Out Cross-Validation (LOOCV)** using the `boot` package.
 
 Out-of-sample performance is quantified as:
 
@@ -30,13 +30,13 @@ Where:
 * $\text{MSE}_{\text{CV}}$ represents the raw mean squared prediction error across all $N$ validation folds (`delta[1]`).
 * $\text{Var}(Y)$ represents the sample variance of the respective target variable within the complete-case analysis cohort.
 
-*Note on $R^2_{\text{CV}}$:* Unlike in-sample $R^2$, cross-validated $R^2$ values can be negative if model predictions on unseen folds perform worse than the sample mean baseline ($\bar{Y}$), indicating absence of generalizable signal or overfitting.
+*Note on $R^2_{\text{CV}}$:* Whilst in-sample $R^2$ are positive, cross-validated $R^2$ values can be negative if model predictions on unseen folds perform worse than the sample mean baseline ($\bar{Y}$), indicating absence of generalisable signal or overfitting.
 
 ---
 
 ## Reproduction & Usage
 
-The script is self-contained. To ensure direct out-of-the-box reproducibility without distributing sensitive patient data, the pipeline automatically generates a synthetic sample dataset ($N = 150$) that matches the exact distributional properties and schema expected by the models.
+The script is self-contained. To ensure direct reproducibility without distributing sensitive patient data, the pipeline automatically generates a synthetic sample dataset ($N = 150$) that matches the exact distributional properties and schema expected by the models.
 
 ### Prerequisites
 
