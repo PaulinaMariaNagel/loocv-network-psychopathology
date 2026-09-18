@@ -1,6 +1,6 @@
 # Cross-Validated Regression Analysis of Functional Brain Network Activity and Dimensional Psychopathology
 
-R pipeline for leave-one-out cross-validated (LOOCV) regression of brain network activity (ToM & Pain) from dimensional psychopathology (ASR) (simulated data because of sensible patient data).
+R pipeline for leave-one-out cross-validated (LOOCV) regression of brain network activity (ToM & Pain) from dimensional psychopathology (ASR) (simulated data because of sensitive patient data).
 
 ---
 
